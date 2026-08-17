@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>景月镇人民政府</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- ========== 顶部横幅 ========== -->
+<div class="top-banner">
+  <div class="container">
+    <span>欢迎访问景月镇人民政府官方网站</span>
+    <span>
+      <a href="#" onclick="showToast('无障碍浏览功能开发中')">无障碍浏览</a> |
+      <a href="#" onclick="showToast('繁體版本建設中')">繁體中文</a> |
+      <a href="well.html" class="hidden-link" id="footerWellLink">^_^</a>
+    </span>
+  </div>
+</div>
+
+<!-- ========== 头部 ========== -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo-area">
+        <!-- 镇徽 SVG -->
+        <svg class="logo-emblem" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="#c41e3a"/>
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#daa520" stroke-width="2"/>
+          <polygon points="50,20 53,30 63,30 55,37 58,47 50,41 42,47 45,37 37,30 47,30" fill="#daa520"/>
+          <path d="M25,60 Q50,70 75,60" fill="none" stroke="#daa520" stroke-width="2"/>
+          <path d="M20,68 Q50,80 80,68" fill="none" stroke="#daa520" stroke-width="1.5"/>
+          <text x="50" y="90" text-anchor="middle" fill="#daa520" font-size="8" font-family="serif">景月</text>
+        </svg>
+        <div class="site-title">
+          <h1>景月镇人民政府</h1>
+          <p>JINGYUE TOWN PEOPLE'S GOVERNMENT</p>
+        </div>
+      </div>
+      <div class="header-search">
+        <input type="text" id="siteSearch" placeholder="搜索站内信息...">
+        <button onclick="handleSearch()">搜索</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== 导航 ========== -->
+<nav class="main-nav">
+  <div class="container">
+    <ul class="nav-list">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="news.html">新闻动态</a></li>
+      <li><a href="about.html">镇情介绍</a></li>
+      <li><a href="government.html">政务公开</a></li>
+      <li><a href="service.html">便民服务</a></li>
+      <li><a href="culture.html">文化旅游</a></li>
+      <li><a href="forum.html">景月论坛</a></li>
+      <li><a href="archive.html">镇史馆</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+    </ul>
+  </div>
+</nav>
+<main class="main-content">
+  <div class="container">
+    <div class="page active">
+
+      <!-- Hero轮播 -->
+      <div class="hero-section">
+        <div class="hero-slide active" style="background: url('jingyue_images/01_town_panorama.jpg') center/cover no-repeat;">
+          <div class="hero-content">
+            <h2>景月镇</h2>
+            <p>景月镇位于月城市西北部，面积86.5平方公里，人口约4.2万。镇政府驻人民路18号。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-grid">
+        <div>
+          <!-- 新闻动态 -->
+          <div class="section-card">
+            <div class="section-header">
+              <span class="section-title">新闻动态</span>
+              <span class="section-more" onclick="navigateTo('news')">更多 →</span>
+            </div>
+            <ul class="news-list" id="homeNewsList">
+              <!-- JS填充 -->
+            </ul>
+          </div>
+
+          <!-- 镇情介绍 -->
+          <div class="town-intro">
+            <h3>景月镇简介</h3>
+            <p>景月镇位于月城市西北部，总面积86.5平方公里，辖12个行政村、3个社区，人口约4.2万。镇区始建于南宋，因镇西景月湖得名。</p>
+            <p>镇内有月牙桥、古戏台、景月书院等明清建筑，以及<span class="hidden-link" onclick="discoverHidden('well_location');showWellInfo();return false;">北井</span>等遗迹。2019年获评省级历史文化名镇。</p>
+            <p>先后获评省级全域旅游示范镇、省级卫生镇。</p>
+          </div>
+
+          <!-- 风景画廊 -->
+          <div class="section-card">
+            <div class="section-header">
+              <span class="section-title">景月风光</span>
+            </div>
+            <div class="gallery-grid" id="homeGallery">
+              <!-- JS填充 -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 侧边栏 -->
+        <div class="sidebar">
+          <div class="notice-box">
+            <h4><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8b6914" stroke-width="2" style="vertical-align:-2px;margin-right:4px;"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 11-5.8-1.6"/></svg>通知公告</h4>
+            <p>• 2024年度城乡居民医保缴费开始</p>
+            <p>• 古镇景区门票4月起调整</p>
+            <p>• 春季灭鼠活动通知</p>
+            <p>• 北井公园改造工程中标公示</p>
+          </div>
+
+          <div class="quick-links">
+            <h4>便民服务</h4>
+            <div class="link-grid">
+              <a href="#" onclick="navigateTo('service')">社保查询</a>
+              <a href="#" onclick="navigateTo('service')">医保办理</a>
+              <a href="#" onclick="navigateTo('service')">户籍办理</a>
+              <a href="#" onclick="navigateTo('service')">生育登记</a>
+              <a href="#" onclick="navigateTo('service')">低保申请</a>
+              <a href="#" onclick="navigateTo('service')">住房保障</a>
+              <a href="#" onclick="navigateTo('service')">就业服务</a>
+              <a href="#" onclick="navigateTo('service')">更多服务</a>
+            </div>
+          </div>
+
+          <div class="quick-links">
+            <h4>友情链接</h4>
+            <div class="link-grid">
+              <a href="#" onclick="showToast('跳转至月城市政府官网')">月城市政府</a>
+              <a href="#" onclick="showToast('跳转至江南省政府官网')">江南省政府</a>
+              <a href="#" onclick="showToast('跳转至中央人民政府')">中央政府</a>
+              <a href="well.html" class="hidden-link" id="sidebarWellLink">???</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 新闻动态页 ===== -->
+    
+    </div>
+  </div>
+</main>
+<!-- ========== 页脚 ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h5>景月镇人民政府</h5>
+        <p>地址：江南省月城市景月镇人民路18号</p>
+        <p>邮编：313300</p>
+        <p>电话：0572-8866000</p>
+        <p>邮箱：jingyue@yuecheng.gov.cn</p>
+      </div>
+      <div>
+        <h5>快速导航</h5>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="news.html">新闻动态</a></li>
+          <li><a href="about.html">镇情介绍</a></li>
+          <li><a href="service.html">便民服务</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>友情链接</h5>
+        <ul>
+          <li><a href="#" onclick="showToast('跳转中...')">月城市人民政府</a></li>
+          <li><a href="#" onclick="showToast('跳转中...')">江南省人民政府</a></li>
+          <li><a href="#" onclick="showToast('跳转中...')">中央人民政府</a></li>
+          <li><a href="well.html" class="hidden-link" id="footerWellLink2">井下</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>网站说明</h5>
+        <p>主办：景月镇人民政府</p>
+        <p>承办：景月镇信息化办公室</p>
+        <p>备案号：浙ICP备05012345号</p>
+        <p>网站标识码：3305230001</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 景月镇人民政府 版权所有 | 建议1920×1080分辨率浏览</p>
+      <p style="margin-top:4px;">本网站支持IPv6访问 | 无障碍浏览</p>
+    </div>
+  </div>
+</footer>
+<!-- ========== 结局画面 ========== -->
+<div id="endingScreen" class="ending-screen" style="display:none;">
+  <div class="ending-title" id="endingTitle">结局</div>
+  <div class="ending-text" id="endingText"></div>
+  <button class="ending-restart" onclick="restartGame()">重新开始</button>
+</div>
+<!-- ========== 模态框 ========== -->
+<div class="modal-overlay" id="newsModal" onclick="closeModal('newsModal')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <h3 id="newsModalTitle">新闻详情</h3>
+      <button class="modal-close" onclick="closeModal('newsModal')">×</button>
+    </div>
+    <div class="modal-body" id="newsModalBody"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="archiveModal" onclick="closeModal('archiveModal')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <h3 id="archiveModalTitle">档案</h3>
+      <button class="modal-close" onclick="closeModal('archiveModal')">×</button>
+    </div>
+    <div class="modal-body" id="archiveModalBody"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="passwordModal" onclick="closeModal('passwordModal')">
+  <div class="modal-box" onclick="event.stopPropagation()" style="max-width:400px;">
+    <div class="modal-header">
+      <h3>机密档案 · 身份验证</h3>
+      <button class="modal-close" onclick="closeModal('passwordModal')">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="password-lock">
+        <p style="font-size:13px;color:#666;margin-bottom:20px;">该档案未公开，需输入4位查阅码。</p>
+        <div class="password-input">
+          <input type="text" class="password-digit" maxlength="1" oninput="moveToNext(this,0)">
+          <input type="text" class="password-digit" maxlength="1" oninput="moveToNext(this,1)">
+          <input type="text" class="password-digit" maxlength="1" oninput="moveToNext(this,2)">
+          <input type="text" class="password-digit" maxlength="1" oninput="moveToNext(this,3)">
+        </div>
+        <button class="password-btn" onclick="checkPassword()">确认</button>
+        <p id="passwordError" style="color:#c41e3a;font-size:13px;margin-top:12px;min-height:18px;"></p>
+        <p style="font-size:11px;color:#999;margin-top:20px;font-style:italic;">
+          提示：编号末尾的四位数。
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ========== Toast ========== -->
+<div class="toast" id="toast"></div>
+<!-- ========== 进度HUD ========== -->
+<div class="progress-hud" onclick="toggleProgressDetail()">
+  <div class="progress-hud-title">探索进度</div>
+  <div class="progress-bar-bg">
+    <div class="progress-bar-fill" id="progressBar" style="width:0%"></div>
+  </div>
+  <div class="progress-hud-detail" id="progressDetail">
+    <ul id="progressList"></ul>
+  </div>
+</div>
+<script src="js/common.js"></script>
+<script>initPage('home');</script>
+</body>
+</html>
